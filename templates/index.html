@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<div id="text-to-read">
+<h1>Bienvenido</h1>
+<p >Este es un tutorial Flask accesible para personas con debilidad visual.</p>
+
+<h1>¿Por qué usar blanco y negro en una app web para personas con baja visión?</h1>
+
+<p>El uso de un esquema de colores con <strong>alto contraste</strong>, como texto negro sobre fondo blanco o texto blanco sobre fondo negro, es una de las prácticas más recomendadas en diseño accesible para personas con baja visión o deficiencias visuales.</p>
+
+<p>Las personas con visión reducida o condiciones como cataratas, degeneración macular o retinopatía diabética suelen tener dificultades para percibir colores con bajo contraste o tonalidades similares. Al ofrecer un contraste máximo, como blanco y negro, se facilita la distinción entre el texto y el fondo, lo que mejora notablemente la legibilidad, reduce la fatiga visual y permite una navegación más eficiente.</p>
+
+<p>Las pautas de accesibilidad internacionales (WCAG — <em>Web Content Accessibility Guidelines</em>) recomiendan alcanzar una relación de contraste mínima de 4.5:1 para texto normal y de 7:1 para mejorar la experiencia de usuarios con baja visión. El blanco y negro exceden ampliamente estos mínimos, logrando un contraste de 21:1, el máximo posible, lo que los convierte en la elección más segura y universal para garantizar la accesibilidad.</p>
+
+<p>Además, muchas herramientas y modos de alto contraste en los sistemas operativos (como Windows o macOS) y navegadores se basan precisamente en combinaciones de blanco y negro, por su efectividad comprobada. Por esta razón, muchos sitios web y aplicaciones accesibles incluyen un modo “alto contraste” o “modo oscuro” con estas tonalidades para adaptarse a las necesidades de los usuarios con debilidad visual.</p>
+
+<p>En resumen, elegir blanco y negro no sólo mejora la usabilidad para personas con baja visión, sino que también cumple con estándares internacionales de accesibilidad, haciendo que la aplicación sea más inclusiva y usable para todos los públicos.</p>
+</div>
+{% endblock %}

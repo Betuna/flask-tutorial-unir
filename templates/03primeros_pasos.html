@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% block content %}
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<div id="text-to-read">
+<h1>Primeros pasos con Flask: <em>Hola Mundo</em></h1>
+
+<h2>¿Cómo hacer tu primera aplicación?</h2>
+<p>Crea un archivo llamado <code>app.py</code> con el siguiente contenido básico:</p>
+
+<pre><code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "¡Hola, Mundo!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+</code></pre>
+
+<h2>Pasos para ejecutarlo</h2>
+<ol>
+<li>Abre una terminal en la carpeta donde guardaste <code>app.py</code>.</li>
+<li>Si usas un entorno virtual, actívalo.</li>
+<li>Ejecuta el archivo:
+<pre><code>python app.py</code></pre>
+</li>
+</ol>
+
+<p>Verás un mensaje similar a:</p>
+<pre><code>* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)</code></pre>
+
+<h2>Ver el resultado</h2>
+<p>Abre tu navegador y ve a:</p>
+<pre><code>http://127.0.0.1:5000/</code></pre>
+<p>y deberías ver el mensaje:</p>
+<pre><code>¡Hola, Mundo!</code></pre>
+<p>
+<img src="{{ url_for('static', filename='img/HOLAMUNDO.png') }}" alt="Descripción de la imagen" width="300" height="200">
+</p>
+<h2>Notas</h2>
+<ul>
+<li>La opción <code>debug=True</code> hace que el servidor se reinicie automáticamente si detecta cambios y muestra mensajes de error detallados.</li>
+<li>Puedes cambiar el mensaje de retorno por HTML si lo deseas.</li>
+</ul>
+</div>
+{% endblock %}

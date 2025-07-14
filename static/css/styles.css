@@ -1,0 +1,50 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.1rem;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #eee;
+  }
+}
+nav {
+  width: 220px;
+  min-height: 100vh;
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+nav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  margin: 1rem 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:focus, nav ul li a:hover {
+  text-decoration: underline;
+  outline: 2px solid yellow;
+}
+main {
+  flex: 1;
+  padding: 2rem;
+}
+button.speak-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}

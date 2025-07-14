@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Utilización de Flask{% endblock %}
+{% block content %}
+
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<div id="text-to-read">
+
+<h1>Utilización del framework Flask</h1>
+
+<h2>¿Cómo empezar a crear una aplicación base?</h2>
+<ol>
+<li>Crea una carpeta para tu proyecto.</li>
+<li>Dentro de esa carpeta, crea un archivo <code>app.py</code> con la estructura básica de Flask:
+<pre><code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "¡Bienvenido a tu aplicación Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+</code></pre>
+</li>
+<li>Crea una carpeta <code>templates/</code> para tus archivos HTML y una carpeta <code>static/</code> para tus archivos CSS y JS.</li>
+<li>(Opcional) Crea un entorno virtual y activa antes de instalar Flask y ejecutar el servidor.</li>
+</ol>
+
+<h2>¿Cómo visualizar los resultados de la ejecución?</h2>
+<ol>
+<li>Abre una terminal en la carpeta del proyecto.</li>
+<li>Activa tu entorno virtual si lo tienes.</li>
+<li>Ejecuta el archivo <code>app.py</code>:
+<pre><code>python app.py</code></pre></li>
+<li>Verás un mensaje indicando que el servidor está corriendo en una dirección, normalmente:
+<pre><code>* Running on http://127.0.0.1:5000/</code></pre></li>
+<li>Abre tu navegador y visita esa dirección para ver tu aplicación en funcionamiento.</li>
+<li>Cualquier cambio que hagas en los archivos se reflejará al recargar la página (si tienes <code>debug=True</code>).</li>
+</ol>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Funcionamiento de Flask{% endblock %}
+
+{% block content %}
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<div id="text-to-read">
+<h1>Explicación del funcionamiento de Flask</h1>
+
+<h2>¿Actúa sobre páginas, ficheros, secciones…?</h2>
+<ul>
+<li>Flask actúa como intermediario entre el navegador y tu servidor.</li>
+<li>Cuando el navegador envía una solicitud (URL), Flask la procesa y devuelve una respuesta (HTML, JSON, etc.).</li>
+<li>Las rutas (URLs) que defines en tu código apuntan a funciones que generan el contenido a devolver.</li>
+<li>También sirve archivos estáticos (CSS, JS, imágenes) y páginas dinámicas construidas con plantillas HTML.</li>
+</ul>
+
+<h2>¿Cómo se editan/modifican los ficheros que actúan en el framework?</h2>
+<ul>
+<li>Usa un editor como <strong>Visual Studio Code</strong> para abrir y editar los archivos del proyecto.</li>
+<li>Los archivos principales son:
+  <ul>
+    <li><code>.py</code>: Código de la lógica de la aplicación.</li>
+    <li><code>templates/*.html</code>: Plantillas para las páginas web.</li>
+    <li><code>static/</code>: Recursos estáticos como CSS, JS e imágenes.</li>
+  </ul>
+</li>
+<li>Guarda los cambios y recarga el navegador para verlos reflejados (si tienes <code>debug=True</code>, Flask reinicia automáticamente).</li>
+</ul>
+
+<h2>¿Cómo se referencian los ficheros creados desde otras aplicaciones (si es el caso)?</h2>
+<ul>
+<li>Si otra aplicación quiere acceder a tu Flask, puede hacerlo enviando solicitudes HTTP a las rutas que definas.</li>
+<li>Por ejemplo, puedes exponer endpoints (APIs) que devuelvan datos en formato JSON y sean consumidos por aplicaciones móviles, frontends en JavaScript, etc.</li>
+<li>Para referenciar recursos estáticos y plantillas dentro del propio proyecto, usa las funciones de Flask:
+  <ul>
+    <li><code>url_for('static', filename='css/styles.css')</code> para CSS/JS/imágenes.</li>
+    <li><code>render_template('nombre_plantilla.html')</code> para cargar HTML.</li>
+  </ul>
+</li>
+</ul>
+</div>
+{% endblock %}

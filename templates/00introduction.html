@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}¿Qué es Flask?{% endblock %}
+{% block content %}
+<h1>¿Qué es Flask?</h1>
+<p id="text-to-read">Flask es un microframework de Python para construir aplicaciones web.</p>
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<p>
+<img src="{{ url_for('static', filename='img/FLASK.png') }}" alt="Descripción de la imagen" width="300" height="200">
+<p>Recomendamos que veas este vídeo introductorio sobre Flask:</p>
+<p style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PseiVf4jW3Y?si=VFUw_gH8UNFZ2avn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+{% endblock %}

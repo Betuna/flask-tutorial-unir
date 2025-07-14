@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+{% block title %}Paso a Paso: Ejemplo 4 de Flask{% endblock %}
+
+{% block content %}
+<h1>Paso a Paso: Ejemplo de Flask</h1>
+
+<p>Este ejercicio se basa en el repositorio de GitHub: 
+<a href="https://github.com/josedom24/ejemplos_flask/tree/master/ejemplo4" target="_blank">
+https://github.com/josedom24/ejemplos_flask/tree/master/ejemplo4</a></p>
+
+<h2>Objetivo</h2>
+<p>Crear una aplicación web con Flask que maneje formularios, procese datos enviados por el usuario y los muestre en una plantilla.</p>
+
+<h2>Paso a Paso</h2>
+
+<ol>
+<li><strong>Clonar o descargar el repositorio</strong>
+<pre><code>git clone https://github.com/josedom24/ejemplos_flask.git</code></pre>
+o descarga el ZIP y extrae su contenido.</li>
+<p>
+<img src="{{ url_for('static', filename='img/ejemplo_1paso.png') }}" alt="Descripción de la imagen" width="65%" height="65%">
+</p>
+<li><strong>Accede a la carpeta del ejemplo</strong>
+<pre><code>cd ejemplos_flask/ejemplo4</code></pre></li>
+<p>
+<img src="{{ url_for('static', filename='img/ejempli_2paso.png') }}" alt="Descripción de la imagen" width="65%" height="65%">
+</p>
+<li><strong>Activa tu entorno virtual (opcional pero recomendado)</strong>
+<pre><code>python -m venv venv
+venv\Scripts\activate</code></pre></li>
+<p>
+<img src="{{ url_for('static', filename='img/ejemplo_3paso.png') }}" alt="Descripción de la imagen" width="65%" height="65%">
+</p>
+<li><strong>Instala Requerimientos para el proyecto</strong>:
+<pre><code>pip install -r requirements.txt</code></pre></li>
+<p> El archivo requirements.txt se encuentra en la base del proyecto, debes copiarlo a la carpeta ejemplo4</p>
+<p>
+<img src="{{ url_for('static', filename='img/ejemplo_4apaso.png') }}" alt="Descripción de la imagen" width="65%" height="65%">
+</p>
+<li><strong>Explora los archivos principales del ejemplo</strong>:
+<ul>
+<li><code>app.py</code>: código principal de la aplicación.</li>
+<li><code>templates/formulario.html</code>: plantilla con el formulario HTML.</li>
+<li><code>templates/respuesta.html</code>: plantilla para mostrar los datos enviados.</li>
+</ul>
+</li>
+
+<li><strong>Ejecuta la aplicación</strong>:
+<pre><code>python app.py</code></pre>
+El servidor iniciará en:
+<pre><code>http://127.0.0.1:5000/</code></pre></li>
+
+<li><strong>Prueba la aplicación</strong>:
+<ul>
+<li>Abre el navegador y visita <code>http://127.0.0.1:5000/</code>.</li>
+<li>Rellena el formulario con tus datos y envíalo.</li>
+<li>La página de respuesta mostrará los datos que enviaste.</li>
+</ul>
+</li>
+</ol>
+<p>
+<img src="{{ url_for('static', filename='img/ejemplo_result.png') }}" alt="Descripción de la imagen" width="65%" height="65%">
+</p>
+<h2>Archivos clave</h2>
+<ul>
+<li><code>app.py</code>: define las rutas <code>/</code> y <code>/recibe</code>, procesa los datos enviados desde el formulario.</li>
+<li><code>templates/formulario.html</code>: muestra un formulario con campos para rellenar.</li>
+<li><code>templates/respuesta.html</code>: muestra los datos recibidos del formulario.</li>
+</ul>
+
+<h2>Resultado</h2>
+<p>Al completar el ejercicio, tendrás una aplicación web funcional que recibe datos desde un formulario y los muestra en una página diferente. Este ejemplo es ideal para aprender a manejar formularios y rutas POST/GET en Flask.</p>
+{% endblock %}

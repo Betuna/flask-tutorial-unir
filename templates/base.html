@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Tutorial Flask{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/speech.js') }}"></script>
+</head>
+<body>
+  <nav role="navigation" aria-label="Navegación principal">
+    <h2>Tutorial Flask</h2>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/00introduction">¿Qué es Flask?</a></li>
+      <li><a href="/01justificacion">Justificación de Flask</a></li>
+      <li><a href="/02instalacion">Instalación de Flask</a></li>
+      <li><a href="/03primeros_pasos">Primeros pasos con Flask</a></li>
+      <li><a href="/04utilizacion_de_flask">Utilización de Flask</a></li>
+      <li><a href="/05explicacion_del_funcionamiento_de_flask">Explicación del funcionamiento de Flask</a></li>
+      <li><a href="/06ejemplo_paso_a_paso">Ejemplo: Paso a Paso</a></li>
+      <li><a href="/07conclusiones_del_tutorial">Conclusiones del tutorial</a></li>
+
+    </ul>
+
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

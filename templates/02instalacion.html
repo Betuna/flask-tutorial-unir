@@ -1,0 +1,60 @@
+
+{% extends "base.html" %}
+{% block content %}
+<button class="speak-btn" onclick="toggleSpeak('text-to-read')">🔊 Escuchar</button>
+<div id="text-to-read">
+<h1>Instalación de Flask </h1>
+
+<h2>¿Se precisa instalación?</h2>
+<ul>
+<li>Sí, Flask no viene con Python por defecto.</li>
+<li>Se instala fácilmente con el gestor de paquetes <code>pip</code>.</li>
+</ul>
+
+<h2>Pasos para instalar en <strong>Windows 11</strong> con <strong>Visual Studio Code</strong></h2>
+<ol>
+<li>Asegúrate de tener <strong>Python 3.7+</strong> instalado.</li>
+<li>Verifica que <code>pip</code> funcione:
+<pre><code>python --version
+pip --version</code></pre></li>
+<li>(Opcional) Crea un entorno virtual para tu proyecto:
+<pre><code>python -m venv venv</code></pre>
+y actívalo:
+<pre><code>venv\Scripts\activate</code></pre></li>
+<li>Instala Flask en el entorno:
+<pre><code>pip install Flask</code></pre></li>
+</ol>
+
+<h2>Versiones necesarias</h2>
+<ul>
+<li>Python: mínimo <strong>3.7</strong>, recomendado <strong>3.11</strong>.</li>
+<li>Flask: usa la última versión estable.</li>
+</ul>
+
+<h2> Rutas a tener en cuenta</h2>
+<ul>
+<li>Trabaja siempre desde la carpeta raíz de tu proyecto para que las rutas relativas funcionen.</li>
+<li>Guarda tus archivos <code>.py</code> en la raíz, y las plantillas en una carpeta llamada <code>templates/</code>.</li>
+</ul>
+
+<h2>Variables de entorno (opcionales pero recomendadas)</h2>
+Define estas variables para desarrollo:
+<pre><code>set FLASK_APP=app.py
+set FLASK_ENV=development</code></pre>
+<p>Puedes agregarlas en tu terminal antes de ejecutar o configurarlas en tu <code>.env</code>.</p>
+
+<h2>¿Necesita base de datos?</h2>
+<ul>
+<li> No es obligatoria.</li>
+<li>Pero puedes integrarlo con bases como SQLite, MySQL o PostgreSQL cuando tu proyecto lo requiera.</li>
+</ul>
+
+<h2>Otros consejos</h2>
+<ul>
+<li>Instala también un editor como <strong>Visual Studio Code</strong> para escribir tu código cómodamente.</li>
+<li>Instala la extensión <em>Python</em> en VS Code para resaltar y depurar el código.</li>
+<li>Mantén tu entorno virtual para evitar conflictos con otros proyectos.</li>
+</ul>
+</div>
+
+{% endblock %}
